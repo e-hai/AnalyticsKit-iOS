@@ -1,10 +1,10 @@
-# AGENTS.md (iOS Branch)
+# AGENTS.md
 
-Guidance for AI coding agents working on the iOS branch of this repository.
+Guidance for AI coding agents working in this repository.
 
 ## Project purpose
 
-AnalyticsKit is an iOS Swift multi-product package that wraps analytics SDKs
+AnalyticsKit-iOS is an iOS Swift multi-product package that wraps analytics SDKs
 (Firebase Analytics first; more providers later) behind a single unified API.
 
 Apps depend on Kit targets and call `Analytics.*`. They must not talk to
