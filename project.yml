@@ -2,7 +2,7 @@ name: AnalyticsKitDemo
 options:
   bundleIdPrefix: com.kit.analytics
   deploymentTarget:
-    iOS: "14.0"
+    iOS: "15.0"
 packages:
   AnalyticsKit-iOS:
     path: .
@@ -10,7 +10,7 @@ targets:
   AnalyticsKitDemo:
     type: application
     platform: iOS
-    deploymentTarget: "14.0"
+    deploymentTarget: "15.0"
     sources:
       - path: Sample
     dependencies:
