@@ -1,0 +1,32 @@
+name: AnalyticsKitDemo
+options:
+  bundleIdPrefix: com.kit.analytics
+  deploymentTarget:
+    iOS: "14.0"
+packages:
+  AnalyticsKit-iOS:
+    path: .
+targets:
+  AnalyticsKitDemo:
+    type: application
+    platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: Sample
+    dependencies:
+      - package: AnalyticsKit-iOS
+        product: Analytics
+    settings:
+      base:
+        INFOPLIST_FILE: Sample/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.kit.analytics.demo
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ENABLE_PREVIEWS: YES
+        SWIFT_VERSION: "5.0"
+schemes:
+  AnalyticsKitDemo:
+    build:
+      targets:
+        AnalyticsKitDemo: all
+    run:
+      config: Debug
