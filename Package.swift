@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "AnalyticsKit",
+    name: "AnalyticsKit-iOS",
     platforms: [
         .iOS(.v13),
         .macOS(.v12),

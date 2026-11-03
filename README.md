@@ -1,4 +1,4 @@
-# AnalyticsKit (iOS)
+# AnalyticsKit-iOS
 
 iOS 统一统计封装库：业务只依赖统一 API，底层可插拔接入 Firebase Analytics 等 SDK。
 
@@ -81,16 +81,16 @@ sequenceDiagram
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/e-hai/AnalyticsKit.git", branch: "ios")
+    .package(url: "https://github.com/e-hai/AnalyticsKit-iOS.git", from: "1.0.0")
 ],
 targets: [
     .target(
         name: "YourAppTarget",
         dependencies: [
             // 仅使用核心能力
-            .product(name: "Analytics", package: "AnalyticsKit"),
+            .product(name: "Analytics", package: "AnalyticsKit-iOS"),
             // 若接入 Firebase 则同时引入
-            .product(name: "AnalyticsFirebase", package: "AnalyticsKit"),
+            .product(name: "AnalyticsFirebase", package: "AnalyticsKit-iOS"),
         ]
     )
 ]
@@ -99,8 +99,8 @@ targets: [
 ### Xcode GUI 方式
 
 1. 在 Xcode 中打开项目，选择 **File** → **Add Package Dependencies...**
-2. 输入仓库地址：`https://github.com/e-hai/AnalyticsKit.git`
-3. 分支选择 `ios`
+2. 输入仓库地址：`https://github.com/e-hai/AnalyticsKit-iOS.git`
+3. 规则选择 **Up to Next Major Version**（或 Branch `main`）
 4. 勾选需要的目标产物：`Analytics` 和（可选）`AnalyticsFirebase`
 
 ## 快速开始
