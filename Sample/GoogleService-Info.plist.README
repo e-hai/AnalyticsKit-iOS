@@ -1,0 +1,25 @@
+# Firebase iOS Configuration
+
+To enable Firebase in the Sample app or your host app:
+
+1. Go to [Firebase Console](https://console.firebase.google.com/).
+2. Create or select your project, then add an iOS app.
+3. Enter your Bundle ID (e.g. `com.kit.analytics.sample`).
+4. Download `GoogleService-Info.plist`.
+5. Add `GoogleService-Info.plist` to your Xcode project target.
+6. In your App entry point (`SampleApp.swift` or `AppDelegate.swift`):
+   ```swift
+   import FirebaseCore
+   import Analytics
+   import AnalyticsFirebase
+
+   FirebaseApp.configure()
+
+   Analytics.initialize(config: AnalyticsConfig(
+       providers: [
+           LoggingAnalyticsProvider(),
+           FirebaseAnalyticsProvider()
+       ],
+       debug: true
+   ))
+   ```
